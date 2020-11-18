@@ -110,10 +110,10 @@ static UINT ThreadProc(LPVOID pParam)
     ThreadParam* pThreadParam = (ThreadParam*)pParam;
     while (!pThreadParam->bExitThread)
     {
-        HWND hWnd = FindWindow(NULL, L"Microsoft Visual C++ Debug Library");
+        HWND hWnd = FindWindow(NULL, L"Microsoft Visual C++ Runtime Library"); // VC6.0: Microsoft Visual C++ Debug Library
         if (NULL != hWnd)
         {
-            CWnd::FromHandle(hWnd)->SetWindowText(L"Microsoft Visual Debug Library");
+            CWnd::FromHandle(hWnd)->SetWindowText(L"Hollysys Assert");
         }
     }
 
